@@ -1,6 +1,51 @@
 $font-stack: 'Spartan', sans-serif;
+$font-size: 15px;
+$dark-magenta: hsl(300, 43%, 22%);
+$subtext: hsl(303, 10%, 53%);
 
 body {
     font-family: $font-stack;
-    color: blue;
+    font-size: $font-size;
+    // background-image: url("/images/bg-pattern-top-desktop.svg"), 
+    // url("/images/bg-pattern-bottom-desktop.svg");
+    // background-position: bottom right;
+    // background-repeat: no-repeat;
+}
+
+main{
+    margin-left: 165px;
+    margin-right: 164px;
+    margin-top: 129px;
+    border: 1px dashed;
+
+    .flex-container-top{
+        display: flex;
+     
+        .left{
+            flex: 1;
+
+            .title-text{
+                color: $dark-magenta;
+                margin: 0px;
+                padding: 0px 50px 0px 0px;
+                letter-spacing: -1.75px;
+                line-height: 1;
+                font-size: 48px;
+                font-weight: 700;
+            }
+
+            .title-subtext{
+                color: $subtext;
+                margin: 0px;
+                padding: 16px 50px 0px 0px;
+                font-weight: 500;
+                letter-spacing: -0.5px;
+                line-height: 1.5;
+            }
+        }
+
+        .right{
+            flex: 1;
+        }
+    }
 }
