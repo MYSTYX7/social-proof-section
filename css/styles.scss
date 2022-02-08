@@ -1,7 +1,8 @@
 $font-stack: 'Spartan', sans-serif;
 $font-size: 15px;
 $dark-magenta: hsl(300, 43%, 22%);
-$subtext: hsl(303, 10%, 53%);
+$subtext-color: hsl(303, 10%, 53%);
+$rating-color: hsl(300, 24%, 96%);
 
 body {
     font-family: $font-stack;
@@ -13,9 +14,7 @@ body {
 }
 
 main{
-    margin-left: 165px;
-    margin-right: 164px;
-    margin-top: 129px;
+    margin: 129px 164px 0px 165px;
     border: 1px dashed;
 
     .flex-container-top{
@@ -23,7 +22,7 @@ main{
      
         .left{
             flex: 1;
-
+    
             .title-text{
                 color: $dark-magenta;
                 margin: 0px;
@@ -35,7 +34,7 @@ main{
             }
 
             .title-subtext{
-                color: $subtext;
+                color: $subtext-color;
                 margin: 0px;
                 padding: 16px 50px 0px 0px;
                 font-weight: 500;
@@ -46,6 +45,44 @@ main{
 
         .right{
             flex: 1;
+
+            @mixin rating{
+                height: 55px;
+                width: 420px;
+                font-size: 14px;
+                margin-bottom: 16px;
+                border-radius: 5px;
+                background-color: $rating-color;
+                display: flex;
+                align-items: center;
+
+                .ratings-flex-left{
+                    padding: 0px 25px;
+                   
+                    .stars{
+                        margin: 0px 1px;
+                    }
+                }
+
+                .ratings-flex-right{
+                    font-weight: 700;
+                    color: $dark-magenta;
+                }
+            }
+
+            .ratings-1{
+                @include rating; 
+                margin-top: 15px; 
+                margin-left: 16px;
+            }
+            .ratings-2{
+                @include rating;  
+                margin-left: 64px;
+            }
+            .ratings-3{
+                @include rating; 
+                margin-left: 112px; 
+            }
         }
     }
 }
