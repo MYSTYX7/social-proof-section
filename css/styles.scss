@@ -5,6 +5,8 @@ $subtext-color: hsl(303, 10%, 53%);
 $rating-color: hsl(300, 24%, 96%);
 $soft-pink: hsl(333, 80%, 67%);
 
+
+@media only screen and (min-width: 1200px){
 body {
     font-family: $font-stack;
     font-size: $font-size;
@@ -135,6 +137,279 @@ main{
             }
             .buyer{
                 color: $soft-pink;
+            }
+        }
+    }
+}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    body {
+        font-family: $font-stack;
+        font-size: $font-size;
+        background-image: url("/images/bg-pattern-top-desktop.svg"), 
+        url("/images/bg-pattern-bottom-desktop.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: 0% 0%, 100% 100%;
+        background-size: 530px 330px, 1000px 650px;
+    }
+    
+    main{
+        margin: 100px 100px;
+    
+        .flex-container-top{
+            display: flex;
+         
+            .left{
+                flex: 1;
+        
+                .title-text{
+                    color: $dark-magenta;
+                    margin: 0px;
+                    padding: 0px 40px 0px 0px;
+                    letter-spacing: -1.75px;
+                    line-height: 1;
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+                .title-subtext{
+                    color: $subtext-color;
+                    margin: 0px;
+                    padding: 16px 40px 0px 0px;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    line-height: 1.5;
+                }
+            }
+            .right{
+                flex: 1;
+                
+                @mixin rating{
+                    height: 55px;
+                    width: 400px;
+                    font-size: 14px;
+                    margin-bottom: 16px;
+                    border-radius: 5px;
+                    background-color: $rating-color;
+                    display: flex;
+                    align-items: center;
+    
+                    .ratings-flex-left{
+                        padding: 0px 20px;
+                       
+                        .stars{
+                            margin: 0px 1px;
+                        }
+                    }
+                    .ratings-flex-right{
+                        font-weight: 700;
+                        color: $dark-magenta;
+                    }
+                }
+    
+                .ratings-1{
+                    @include rating; 
+                    margin-top: 25px; 
+                }
+                .ratings-2{
+                    @include rating;  
+                }
+                .ratings-3{
+                    @include rating;  
+                }
+            }
+        }
+    
+        .flex-container-bottom{
+            display: flex;
+            margin-top: 30px;
+            gap: 25px;
+    
+            @mixin review-box{
+                box-sizing: border-box;
+                width: 352px;
+                border-radius: 10px;
+                background-color: $dark-magenta;
+                padding: 30px 29px;
+                color: $rating-color;
+                font-size: 12px;
+                line-height: 1.8;
+    
+                .review{
+                    padding-top: 10px;
+                }
+            }
+    
+            #review-box-1{
+                @include review-box;
+                margin-bottom: 32px;
+            }
+            #review-box-2{
+                @include review-box;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            #review-box-3{
+                @include review-box;
+                margin-bottom: 32px;
+            }
+    
+            .bio{
+                display: flex;
+                align-items: center;
+    
+                .avatar{
+                    width: 40px;
+                    border-radius: 20px;
+                }
+                p{
+                    padding: 0px 15px;
+                    margin: 0px;
+                }
+                .name-title{
+                    font-weight: 700;
+                    padding-right: 5px;
+                }
+                .buyer{
+                    color: $soft-pink;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    body {
+        font-family: $font-stack;
+        font-size: $font-size;
+        background-image: url("/images/bg-pattern-top-desktop.svg"), 
+        url("/images/bg-pattern-bottom-desktop.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: 0% 0%, 100% 100%;
+        background-size: 530px 330px, 1000px 650px;
+    }
+    
+    main{
+        margin: 100px 150px;
+    
+        .flex-container-top{
+            display: flex;
+         
+            .left{
+                flex: 1;
+        
+                .title-text{
+                    color: $dark-magenta;
+                    margin: 0px;
+                    padding: 0px 40px 0px 0px;
+                    letter-spacing: -1.75px;
+                    line-height: 1;
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+                .title-subtext{
+                    color: $subtext-color;
+                    margin: 0px;
+                    padding: 16px 40px 0px 0px;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    line-height: 1.5;
+                }
+            }
+            .right{
+                flex: 1;
+                
+                @mixin rating{
+                    height: 55px;
+                    width: 420px;
+                    font-size: 14px;
+                    margin-bottom: 16px;
+                    border-radius: 5px;
+                    background-color: $rating-color;
+                    display: flex;
+                    align-items: center;
+    
+                    .ratings-flex-left{
+                        padding: 0px 25px;
+                       
+                        .stars{
+                            margin: 0px 1px;
+                        }
+                    }
+                    .ratings-flex-right{
+                        font-weight: 700;
+                        color: $dark-magenta;
+                    }
+                }
+    
+                .ratings-1{
+                    @include rating; 
+                    margin-top: 25px; 
+                }
+                .ratings-2{
+                    @include rating;  
+                }
+                .ratings-3{
+                    @include rating;  
+                }
+            }
+        }
+    
+        .flex-container-bottom{
+            display: flex;
+            margin-top: 30px;
+            gap: 25px;
+    
+            @mixin review-box{
+                box-sizing: border-box;
+                width: 352px;
+                border-radius: 10px;
+                background-color: $dark-magenta;
+                padding: 30px 29px;
+                color: $rating-color;
+                font-size: 12px;
+                line-height: 1.8;
+    
+                .review{
+                    padding-top: 10px;
+                }
+            }
+    
+            #review-box-1{
+                @include review-box;
+                margin-bottom: 32px;
+            }
+            #review-box-2{
+                @include review-box;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            #review-box-3{
+                @include review-box;
+                margin-bottom: 32px;
+            }
+    
+            .bio{
+                display: flex;
+                align-items: center;
+    
+                .avatar{
+                    width: 40px;
+                    border-radius: 20px;
+                }
+                p{
+                    padding: 0px 15px;
+                    margin: 0px;
+                }
+                .name-title{
+                    font-weight: 700;
+                    padding-right: 5px;
+                }
+                .buyer{
+                    color: $soft-pink;
+                    padding-right: 5px;
+                }
             }
         }
     }
