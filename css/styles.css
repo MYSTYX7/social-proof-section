@@ -108,18 +108,20 @@ main .flex-container-bottom {
 main .flex-container-bottom #review-box-1 {
   box-sizing: border-box;
   width: 352px;
-  height: 200px;
   border-radius: 10px;
   background-color: #502050;
   padding: 30px 29px;
   color: #f7f2f7;
   font-size: 12px;
   line-height: 1.8;
+  margin-bottom: 32px;
+}
+main .flex-container-bottom #review-box-1 .review {
+  padding-top: 10px;
 }
 main .flex-container-bottom #review-box-2 {
   box-sizing: border-box;
   width: 352px;
-  height: 200px;
   border-radius: 10px;
   background-color: #502050;
   padding: 30px 29px;
@@ -127,11 +129,14 @@ main .flex-container-bottom #review-box-2 {
   font-size: 12px;
   line-height: 1.8;
   margin-top: 16px;
+  margin-bottom: 16px;
+}
+main .flex-container-bottom #review-box-2 .review {
+  padding-top: 10px;
 }
 main .flex-container-bottom #review-box-3 {
   box-sizing: border-box;
   width: 352px;
-  height: 200px;
   border-radius: 10px;
   background-color: #502050;
   padding: 30px 29px;
@@ -139,6 +144,9 @@ main .flex-container-bottom #review-box-3 {
   font-size: 12px;
   line-height: 1.8;
   margin-top: 32px;
+}
+main .flex-container-bottom #review-box-3 .review {
+  padding-top: 10px;
 }
 main .flex-container-bottom .bio {
   display: flex;

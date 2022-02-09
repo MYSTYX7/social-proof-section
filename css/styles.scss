@@ -92,21 +92,26 @@ main{
         @mixin review-box{
             box-sizing: border-box;
             width: 352px;
-            height: 200px;
             border-radius: 10px;
             background-color: $dark-magenta;
             padding: 30px 29px;
             color: $rating-color;
             font-size: 12px;
             line-height: 1.8;
+
+            .review{
+                padding-top: 10px;
+            }
         }
 
         #review-box-1{
             @include review-box;
+            margin-bottom: 32px;
         }
         #review-box-2{
             @include review-box;
             margin-top: 16px;
+            margin-bottom: 16px;
         }
         #review-box-3{
             @include review-box;
