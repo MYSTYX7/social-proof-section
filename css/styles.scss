@@ -279,7 +279,7 @@ main{
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px){
+@media only screen and (min-width: 845px) and (max-width: 991px){
     body {
         font-family: $font-stack;
         font-size: $font-size;
@@ -291,7 +291,7 @@ main{
     }
     
     main{
-        margin: 100px 150px;
+        margin: 100px 70px;
     
         .flex-container-top{
             display: flex;
@@ -302,10 +302,10 @@ main{
                 .title-text{
                     color: $dark-magenta;
                     margin: 0px;
-                    padding: 0px 40px 0px 0px;
+                    padding: 0px 20px 0px 0px;
                     letter-spacing: -1.75px;
                     line-height: 1;
-                    font-size: 40px;
+                    font-size: 36px;
                     font-weight: 700;
                 }
                 .title-subtext{
@@ -345,7 +345,7 @@ main{
     
                 .ratings-1{
                     @include rating; 
-                    margin-top: 25px; 
+                    margin-top: 15px; 
                 }
                 .ratings-2{
                     @include rating;  
@@ -388,6 +388,281 @@ main{
             #review-box-3{
                 @include review-box;
                 margin-bottom: 32px;
+            }
+    
+            .bio{
+                display: flex;
+                align-items: center;
+    
+                .avatar{
+                    width: 40px;
+                    border-radius: 20px;
+                }
+                p{
+                    padding: 0px 15px;
+                    margin: 0px;
+                }
+                .name-title{
+                    font-weight: 700;
+                    padding-right: 5px;
+                }
+                .buyer{
+                    color: $soft-pink;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 844px){
+    body {
+        font-family: $font-stack;
+        font-size: $font-size;
+        background-image: url("/images/bg-pattern-top-desktop.svg"), 
+        url("/images/bg-pattern-bottom-desktop.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: 0% 0%, 100% 100%;
+        background-size: 530px 330px, 1000px 650px;
+    }
+    
+    main{
+        margin: 100px 70px;
+    
+        .flex-container-top{
+            display: flex;
+            flex-direction: column;
+            
+            .left{
+                flex: 1;
+                text-align: center;
+
+                .title-text{
+                    color: $dark-magenta;
+                    margin: 0px;
+                    padding: 0px;
+                    letter-spacing: -1.75px;
+                    line-height: 1;
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+                .title-subtext{
+                    color: $subtext-color;
+                    margin: 0px;
+                    padding: 16px 0px 0px;
+                    font-weight: 500;
+                    font-size: 20px;
+                    letter-spacing: -0.5px;
+                    line-height: 1.5;
+                }
+            }
+            .right{
+                flex: 1;
+            
+                @mixin rating{
+                    height: 55px;
+                    width: 420px;
+                    font-size: 14px;
+                    margin: 0px auto 16px;
+                    border-radius: 5px;
+                    background-color: $rating-color;
+                    display: flex;
+                    align-items: center;
+    
+                    .ratings-flex-left{
+                        padding: 0px 25px;
+                       
+                        .stars{
+                            margin: 0px 1px;
+                        }
+                    }
+                    .ratings-flex-right{
+                        font-weight: 700;
+                        color: $dark-magenta;
+                    }
+                }
+    
+                .ratings-1{
+                    @include rating; 
+                    margin-top: 20px; 
+                }
+                .ratings-2{
+                    @include rating;  
+                }
+                .ratings-3{
+                    @include rating;  
+                }
+            }
+        }
+    
+        .flex-container-bottom{
+            display: flex;
+            margin-top: 30px;
+            gap: 25px;
+            flex-direction: column;
+            align-items: center;
+            @mixin review-box{
+                box-sizing: border-box;
+                width: auto;
+                margin: auto 25px;
+                border-radius: 10px;
+                background-color: $dark-magenta;
+                padding: 30px 29px;
+                color: $rating-color;
+                font-size: 12px;
+                line-height: 1.8;
+    
+                .review{
+                    padding-top: 10px;
+                }
+            }
+    
+            #review-box-1{
+                @include review-box;
+            }
+            #review-box-2{
+                @include review-box;
+            }
+            #review-box-3{
+                @include review-box;
+            }
+    
+            .bio{
+                display: flex;
+                align-items: center;
+    
+                .avatar{
+                    width: 40px;
+                    border-radius: 20px;
+                }
+                p{
+                    padding: 0px 15px;
+                    margin: 0px;
+                }
+                .name-title{
+                    font-weight: 700;
+                    padding-right: 5px;
+                }
+                .buyer{
+                    color: $soft-pink;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px){
+    body {
+        font-family: $font-stack;
+        font-size: $font-size;
+        background-image: url("/images/bg-pattern-top-mobile.svg"), 
+        url("/images/bg-pattern-bottom-mobile.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: 0% 0%, 100% 100%;
+        background-size: auto, auto;
+    }
+    
+    main{
+        margin: 75px 20px;
+    
+        .flex-container-top{
+            display: flex;
+            flex-direction: column;
+            
+            .left{
+                flex: 1;
+                text-align: center;
+
+                .title-text{
+                    color: $dark-magenta;
+                    margin: 0px;
+                    padding: 0px 25px;
+                    letter-spacing: -1.75px;
+                    line-height: 1;
+                    font-size: 36px;
+                    font-weight: 700;
+                }
+                .title-subtext{
+                    color: $subtext-color;
+                    margin: 0px;
+                    padding: 40px 0px 0px;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    line-height: 1.5;
+                }
+            }
+            .right{
+                flex: 1;
+                
+                @mixin rating{
+                    height: auto;
+                    width: auto;
+                    font-size: 14px;
+                    margin: 0px auto 16px;
+                    border-radius: 5px;
+                    background-color: $rating-color;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .ratings-flex-left{
+                        padding: 15px 0px 5px;
+                        .stars{
+                            margin: 0px 1.5px;
+                        }
+                    }
+                    .ratings-flex-right{
+                        font-weight: 700;
+                        padding: 5px 0px 15px;
+                        color: $dark-magenta;
+                    }
+                }
+    
+                .ratings-1{
+                    @include rating; 
+                    margin-top: 40px; 
+                }
+                .ratings-2{
+                    @include rating;  
+                }
+                .ratings-3{
+                    @include rating;  
+                }
+            }
+        }
+    
+        .flex-container-bottom{
+            display: flex;
+            margin-top: 30px;
+            gap: 25px;
+            flex-direction: column;
+            align-items: center;
+
+            @mixin review-box{
+                box-sizing: border-box;
+                width: auto;
+                margin: auto;
+                border-radius: 10px;
+                background-color: $dark-magenta;
+                padding: 30px 29px;
+                color: $rating-color;
+                font-size: 12px;
+                line-height: 1.8;
+    
+                .review{
+                    padding-top: 10px;
+                }
+            }
+    
+            #review-box-1{
+                @include review-box;
+            }
+            #review-box-2{
+                @include review-box;    
+            }
+            #review-box-3{
+                @include review-box;
             }
     
             .bio{
